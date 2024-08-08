@@ -343,7 +343,7 @@ frontend
   "description": "A supervisor adding a task for himself",
   "from": "2024-07-22T09:00:00Z",
   "to": "2024-07-22T11:00:00Z",
-  "employeeId": "66b14ec30a2808fac0d40ed7" // Only required if the user is a supervisor
+  "employeeId": "66b14ec30a2808fac0d40ed7" 
 }
 ```
 ### Response
