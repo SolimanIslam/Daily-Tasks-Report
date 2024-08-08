@@ -77,6 +77,7 @@ backend
 
 ### Folder Structure
 
+```plaintext
 frontend
 ├── .env
 ├── .eslintrc.cjs
@@ -119,6 +120,8 @@ frontend
     │   └── use-thunk.js
     └── utils
         └── apiConfig.js
+
+```
 
 
 ### Redux Store
