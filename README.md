@@ -24,6 +24,8 @@ The **Daily Task Report Application** is a web-based solution designed to manage
 ## Backend
 
 ### Folder Structure
+
+```plaintext
 backend
 ├── .env
 ├── .gitignore
@@ -48,6 +50,7 @@ backend
 └── routes
     ├── employeeRouter.js
     └── taskRouter.js
+```
 
 
 ### File Descriptions
