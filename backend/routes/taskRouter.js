@@ -13,9 +13,6 @@ import { taskFieldsFormat } from '../middleware/taskFieldsFormat.js';
 
 const taskRouter = express.Router();
 
-// taskRouter.route('/')
-//   .post(userAuth, taskMutationAuth, taskDurationConstraints, addTask)
-//   .get(userAuth, getMyTasks);
 
 taskRouter.route('/')
   .post(userAuth, taskFieldsFormat, taskMutationAuth, taskDurationConstraints, addTask);

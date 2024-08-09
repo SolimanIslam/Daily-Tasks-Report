@@ -3,15 +3,6 @@ export const TimeSelector = ({ selectedTime, setSelectedTime }) => {
   const startHour = 8; // 8:00 AM
   const endHour = 18; // 6:00 PM
 
-//   for (let hour = startHour; hour <= endHour; hour++) {
-//     for (let minute = 0; minute < 60; minute += 30) {
-//       const hourStr = hour.toString().padStart(2, '0');
-//       const minuteStr = minute.toString().padStart(2, '0');
-//       const timeStr = `${hourStr}:${minuteStr}:00.000`; // Ensure milliseconds are included
-//       times.push(timeStr);
-//     }
-//   }
-
 for (let hour = startHour; hour < endHour; hour++) { // Changed <= to <
     for (let minute = 0; minute < 60; minute += 30) {
       const hourStr = hour.toString().padStart(2, '0');

@@ -1,41 +1,4 @@
-// import mongoose from 'mongoose';
 
-// const employeeSchema = mongoose.Schema(
-//   {
-//     email: {
-//       type: String,
-//       required: true,
-//       unique: true,
-//     },
-//     password: {
-//       type: String,
-//       required: true,
-//     },
-//     role: {
-//       type: String,
-//       enum: ['supervisor', 'regEmployee'],
-//       default: 'regEmployee',
-//     },
-//     tasks: [
-//       {
-//         type: mongoose.Schema.Types.ObjectId,
-//         ref: 'Task',
-//       },
-//     ],
-//   },
-//   {
-//     timestamps: true,
-//   }
-// );
-
-// employeeSchema.pre('remove', async function (next) {
-//   await Task.deleteMany({ employeeId: this._id });
-//   next();
-// });
-
-// const Employee = mongoose.models.employee || mongoose.model('Employee', employeeSchema);
-
-// export default Employee;
 import mongoose from 'mongoose';
 import Task from './Task.js'; // Import the Task model
 

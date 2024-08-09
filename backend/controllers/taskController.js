@@ -117,12 +117,3 @@ export const getDailySummary = async (req, res) => {
 
 
 
-
-
-
-// Get My tasks
-// export const getMyTasks = async (req, res) => {
-//   const tasks = await Task.find({ employeeId: req.user.role === 'supervisor' ? req.query.employeeId : req.user._id });
-//   res.json(tasks);
-// };
-

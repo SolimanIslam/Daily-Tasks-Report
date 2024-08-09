@@ -1,14 +1,3 @@
-// import { Navigate } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
-
-// const PrivateRoute = ({ element }) => {
-//   const token = useSelector((state) => state.auth.token);
-
-//   return token ? element : <Navigate to="/login" />;
-// };
-
-// export default PrivateRoute;
-
 import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
