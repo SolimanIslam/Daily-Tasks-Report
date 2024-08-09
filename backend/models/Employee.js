@@ -1,6 +1,5 @@
 
 import mongoose from 'mongoose';
-import Task from './Task.js'; // Import the Task model
 
 const employeeSchema = mongoose.Schema(
   {
@@ -35,18 +34,6 @@ const employeeSchema = mongoose.Schema(
   }
 );
 
-// employeeSchema.pre('deleteMany', async function (next) {
-//   await Task.deleteMany({ employeeId: this._conditions._id });
-//   next();
-// });
-
-// employeeSchema.pre('findOneAndDelete', async function (next) {
-//   const doc = await this.model.findOne(this.getQuery());
-//   if (doc) {
-//     await Task.deleteMany({ employeeId: doc._id });
-//   }
-//   next();
-// });
 
 const Employee = mongoose.model('Employee', employeeSchema);
 

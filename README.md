@@ -98,7 +98,6 @@ frontend
     │   ├── SignUpForm.jsx
     │   └── TaskSummary.jsx
     ├── pages
-    │   ├── AddTask.jsx
     │   ├── AllEmployees.jsx
     │   ├── DailySummary.jsx
     │   ├── LoginPage.jsx
