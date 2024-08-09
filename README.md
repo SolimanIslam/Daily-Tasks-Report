@@ -160,7 +160,6 @@ frontend
 2. **Frontend**
    - Navigate to `frontend` directory.
    - Run `npm install` to install dependencies.
-   - Configure environment variables in `.env`.
    - Run `npm start` to start the development server.
 
 ## Usage
