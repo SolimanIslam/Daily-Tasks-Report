@@ -29,7 +29,6 @@ The **Daily Task Report Application** is a web-based solution designed to manage
 backend
 ├── .env
 ├── .gitignore
-├── mongosetup.txt
 ├── package.json
 ├── package-lock.json
 ├── server.js
@@ -79,7 +78,6 @@ backend
 
 ```plaintext
 frontend
-├── .env
 ├── .eslintrc.cjs
 ├── .gitignore
 ├── components.json
@@ -112,9 +110,6 @@ frontend
     │   │   ├── authSlice.js
     │   │   ├── employeesSlice.js
     │   │   └── taskSlice.js
-    │   └── thunks
-    │       └── authThunks
-    │           └── loadUser.js
     ├── hooks
     │   ├── use-auth.js
     │   └── use-thunk.js
