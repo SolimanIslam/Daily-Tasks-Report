@@ -24,8 +24,7 @@ export const taskDurationConstraints = async (req, res, next) => {
       return res.status(400).json({ message: 'Task duration cannot exceed 8 hours' });
     }
 
-    console.log("from: ",from);
-    console.log("employeeId: ",employeeId);
+  
 
     
     // Find existing tasks for the relevant employee and date

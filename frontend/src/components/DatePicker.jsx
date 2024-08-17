@@ -14,10 +14,8 @@ export function DatePicker({ selectedDate, setSelectedDate }) {
     if (date) {
       const formattedDate = format(date, 'yyyy-MM-dd');
       setSelectedDate(formattedDate);
-      console.log(formattedDate);
     }
   };
-
 
   return (
     <Popover>

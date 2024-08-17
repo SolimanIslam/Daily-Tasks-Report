@@ -13,7 +13,8 @@ const NonAuthorized = () => {
           <p>Please contact your administrator if you believe this is an error.</p>
         </CardContent>
         <CardFooter>
-          <p>&copy; 2024 Your Company</p>
+          {/* <p>&copy; 2024 Salem Ventures</p> */}
+          <p>&copy; {new Date().getFullYear()} Salem Ventures</p>
         </CardFooter>
       </Card>
     </div>

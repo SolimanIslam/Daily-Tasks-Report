@@ -36,6 +36,16 @@ export const TaskModal = ({ open, onClose, token, employees, myData, onTaskAdded
     }
   }, [employeeId, date, dispatch, token]);
 
+
+  const clearForm = () => {
+    setDescription('');
+    setDate(new Date());
+    setFromTime('08:00:00.000');
+    setToTime('08:30:00.000');
+    setEmployeeId(myData._id);
+   
+  };
+  
   const handleSaveTask = () => {
     setError('');
 
@@ -77,7 +87,7 @@ export const TaskModal = ({ open, onClose, token, employees, myData, onTaskAdded
         const taskFrom = moment(task.from);
         const taskTo = moment(task.to);
         return (moment(from).isBetween(taskFrom, taskTo, undefined, '[)') || moment(to).isBetween(taskFrom, taskTo, undefined, '(]')) ||
-               (moment(from).isSameOrBefore(taskFrom) && moment(to).isSameOrAfter(taskTo));
+          (moment(from).isSameOrBefore(taskFrom) && moment(to).isSameOrAfter(taskTo));
       });
       if (isOverlapping) {
         setError('The selected time overlaps with an existing task.');
@@ -94,11 +104,18 @@ export const TaskModal = ({ open, onClose, token, employees, myData, onTaskAdded
     };
 
     const action = editTask ? updateTask({ ...taskData, taskId: editTask._id }) : addTask(taskData);
+
+
+
     dispatch(action).then(() => {
       onClose();
+      clearForm();
       onTaskAdded();
+     
     });
   };
+
+  
 
   if (!open) return null;
 
@@ -135,11 +152,36 @@ export const TaskModal = ({ open, onClose, token, employees, myData, onTaskAdded
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={onClose}>Cancel</Button>
-          <Button onClick={handleSaveTask}>{editTask ? 'Update Task' : 'Add Task'}</Button>
+          <Button variant="outline" onClick={() => {
+            onClose();
+            clearForm();
+            setError('');
+          }}>Cancel</Button>
+          <Button onClick={() => {
+            handleSaveTask();
+
+          }}>{editTask ? 'Update Task' : 'Add Task'}</Button>
         </CardFooter>
       </Card>
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

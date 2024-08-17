@@ -3,23 +3,22 @@ export const TimeSelector = ({ selectedTime, setSelectedTime }) => {
   const startHour = 8; // 8:00 AM
   const endHour = 18; // 6:00 PM
 
-for (let hour = startHour; hour < endHour; hour++) { // Changed <= to <
+  for (let hour = startHour; hour < endHour; hour++) { // Changed <= to <
     for (let minute = 0; minute < 60; minute += 30) {
       const hourStr = hour.toString().padStart(2, '0');
       const minuteStr = minute.toString().padStart(2, '0');
-      const   
-   timeStr = `${hourStr}:${minuteStr}:00.000`;
+      const
+        timeStr = `${hourStr}:${minuteStr}:00.000`;
       times.push(timeStr);
     }
   }
-  
+
   // Handle the last hour (18:00) separately
-  for (let minute = 0; minute <= 0; minute += 30) { // Include 18:00
-    const hourStr = endHour.toString().padStart(2, '0');
-    const minuteStr = minute.toString().padStart(2, '0');
-    const timeStr = `${hourStr}:${minuteStr}:00.000`;
-    times.push(timeStr);
-  }
+  const hourStr = endHour.toString().padStart(2, '0');
+  const minuteStr = '0'.toString().padStart(2, '0');
+  const timeStr = `${hourStr}:${minuteStr}:00.000`;
+  times.push(timeStr);
+
   return (
     <select
       value={selectedTime}
@@ -34,3 +33,4 @@ for (let hour = startHour; hour < endHour; hour++) { // Changed <= to <
     </select>
   );
 };
+
